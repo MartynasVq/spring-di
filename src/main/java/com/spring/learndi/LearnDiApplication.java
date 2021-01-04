@@ -1,9 +1,13 @@
 package com.spring.learndi;
 
 import com.spring.learndi.controllers.*;
+import com.spring.learndi.examplebeans.FakeDataSource;
+import com.spring.learndi.examplebeans.FakeJmsSource;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
+
+import java.sql.SQLOutput;
 
 @SpringBootApplication
 public class LearnDiApplication {
@@ -36,7 +40,14 @@ public class LearnDiApplication {
 		//MyController myController = (MyController) ctx.getBean("myController");
 		//System.out.println(myController.getGreeting());
 
+		FakeDataSource fakeDataSource = (FakeDataSource) ctx.getBean(FakeDataSource.class);
 
+		System.out.println(fakeDataSource.getUrl());
+
+		FakeJmsSource fakeJmsSource = (FakeJmsSource) ctx.getBean(FakeJmsSource.class);
+
+		System.out.println(fakeJmsSource.getJmsUrl());
+		System.out.println(fakeJmsSource.getSecondUrl());
 
 	}
 

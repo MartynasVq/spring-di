@@ -1,0 +1,31 @@
+# this is a comment
+
+name: Martynas
+
+names:
+      -Peter
+      -John
+      -Mark
+
+pound_sign: "#"
+
+book:
+    author: John Doe
+    publisher: Random Works
+
+boolean: Yes
+
+another_boolean: True
+
+false: No #no, false, FALSE
+
+string: "This is string"
+
+multi_line: | #read everything (with new lines)
+  dasdasd dasdsad
+  asdsads dasdads
+  asdasd
+
+ignore_new_lines: >
+  this is
+  one line
